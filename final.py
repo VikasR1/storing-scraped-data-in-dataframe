@@ -4,24 +4,13 @@ import urllib.request
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# hiding my ip 
-proxies = {
-    'http' : '18.220.51.12:80',
-    'https' :'18.220.51.12:80'
-}
-url1= 'http://httpbin.org/ip'
-req_proxy = requests.get(url1, proxies = proxies)
-print(req_proxy.json())
-
-# hiding ip code ends 
-
 final = pd.DataFrame()
 
-# total pages in ambitionbox are 333 
+# suppose total pages in abc_company are 333 
 
-for j in range(1, 3):
+for j in range(1, 333):
 
-    url = 'https://www.ambitionbox.com/list-of-companies?page{}'.format(j)
+    url = 'https://www.abc_company.com/list-of-companies?page{}'.format(j)
 
     headers = {
         'Accept-Encoding': 'gzip, deflate, sdch',
