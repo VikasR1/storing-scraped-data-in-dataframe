@@ -31,7 +31,7 @@ for i in company:
     old.append(i.find_all('p', class_='infoEntity')[2].text.strip())
     employee.append(i.find_all('p', class_='infoEntity')[3].text.strip())
 
-# #creating a dictonary
+# #creating a dictionary
 
 d = {'name' : name, 'rating':rating, 'review':review, 'type':comtype, 'hq':hq, 'old':old, 'employee':employee}
 
